@@ -2,7 +2,16 @@
 
 import { useState } from "react";
 
-export default function PatchForm({ onGenerate }: { onGenerate: (data: any) => void }) {
+interface PatchFormData {
+  mode: "meme" | "dev";
+  gameTitle?: string;
+  style?: string;
+  memeDescription?: string;
+  changelog?: string;
+  format?: string;
+}
+
+export default function PatchForm({ onGenerate }: { onGenerate: (data: PatchFormData) => void }) {
   const [mode, setMode] = useState<"meme" | "dev">("meme");
   const [gameTitle, setGameTitle] = useState("");
   const [style, setStyle] = useState("League-style");
@@ -15,7 +24,7 @@ export default function PatchForm({ onGenerate }: { onGenerate: (data: any) => v
     e.preventDefault();
     setLoading(true);
 
-    const payload =
+    const payload: PatchFormData =
       mode === "meme"
         ? { mode, gameTitle, style, memeDescription }
         : { mode, changelog, format };

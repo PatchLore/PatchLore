@@ -4,8 +4,8 @@ import { useState } from 'react';
 import PatchForm from '@/components/PatchForm';
 import PatchResult from '@/components/PatchResult';
 
-interface PatchData {
-  mode: string;
+interface PatchFormData {
+  mode: "meme" | "dev";
   gameTitle?: string;
   style?: string;
   memeDescription?: string;
@@ -19,7 +19,7 @@ export default function Home() {
   const [currentGameName, setCurrentGameName] = useState<string>('');
   const [error, setError] = useState<string>('');
 
-  const handleFormSubmit = async (data: PatchData) => {
+  const handleFormSubmit = async (data: PatchFormData) => {
     try {
       setError(''); // Clear previous errors
       
