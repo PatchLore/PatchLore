@@ -72,9 +72,18 @@ export default function Home() {
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
             AI Patch Notes Generator
           </h1>
-          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-2">
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-2 mb-4">
             Generate hilarious fake patch notes for games or turn your changelog into professional release notes
           </p>
+          <a
+            href="/newsletter"
+            className="inline-flex items-center gap-2 text-purple-600 hover:text-purple-700 hover:underline font-medium text-sm sm:text-base"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            Subscribe to Newsletter
+          </a>
         </div>
 
         {/* Error Display */}
@@ -106,6 +115,20 @@ export default function Home() {
         {/* Footer with Feedback Link */}
         <div className="mt-12 sm:mt-16 text-center">
           <div className="border-t border-gray-200 pt-6 sm:pt-8">
+            {/* Newsletter Signup */}
+            <div className="mb-6 sm:mb-8">
+              <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3">
+                Stay Updated with PatchLore
+              </h3>
+              <p className="text-sm sm:text-base text-gray-600 mb-4 max-w-md mx-auto">
+                Get notified about new features, styles, and updates!
+              </p>
+              <div className="newsletter-form-container">
+                <script async data-uid="8a6cec5287" src="https://patchlore.kit.com/8a6cec5287/index.js"></script>
+              </div>
+            </div>
+            
+            {/* Feedback Link */}
             <a
               href="https://forms.gle/6rshLNxb6L8oSyKL8"
               target="_blank"
@@ -117,6 +140,19 @@ export default function Home() {
               </svg>
               Got Feedback or a Style Request?
             </a>
+            
+            {/* Newsletter Link */}
+            <div className="mt-3">
+              <a
+                href="/newsletter"
+                className="inline-flex items-center gap-2 text-gray-500 hover:text-gray-700 hover:underline transition-colors text-sm sm:text-base"
+              >
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                Subscribe to Newsletter
+              </a>
+            </div>
           </div>
         </div>
       </div>
