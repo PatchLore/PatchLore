@@ -107,7 +107,7 @@ export default function Home() {
         <div className="mt-12 sm:mt-16 text-center">
           <div className="border-t border-gray-200 pt-6 sm:pt-8">
             <a
-              href="https://forms.gle/yEUDmhR5h9kcsNMD8"
+              href="https://forms.gle/6rshLNxb6L8oSyKL8"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-gray-500 hover:text-gray-700 hover:underline transition-colors text-sm sm:text-base"
