@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import PatchForm from '@/components/PatchForm';
 import PatchResult from '@/components/PatchResult';
+import { event } from '@/lib/gtag';
 
 interface PatchFormData {
   mode: "meme" | "dev";
@@ -58,6 +59,13 @@ export default function Home() {
       setPatchResult(result.result);
       setCurrentMode(result.mode);
       setCurrentGameName(result.gameName);
+      
+      // Track successful patch note generation
+      event({
+        action: 'generate_patch_notes',
+        category: 'engagement',
+        label: `${data.mode}_mode`,
+      });
     } catch (error) {
       console.error('Error generating patch notes:', error);
       setError('Network error. Please check your connection and try again.');

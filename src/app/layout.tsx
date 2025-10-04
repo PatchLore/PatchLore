@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
+import PageView from "@/components/PageView";
 
 export const metadata: Metadata = {
   title: "AI Patch Notes Generator",
@@ -13,7 +15,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">{children}</body>
+      <head>
+        <GoogleAnalytics />
+      </head>
+      <body className="antialiased">
+        <PageView />
+        {children}
+      </body>
     </html>
   );
 }
