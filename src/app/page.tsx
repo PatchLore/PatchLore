@@ -4,7 +4,6 @@ import { useState } from 'react';
 import PatchForm from '@/components/PatchForm';
 import PatchResult from '@/components/PatchResult';
 import { event } from '@/lib/gtag';
-import GA4Test from '@/components/GA4Test';
 
 interface PatchFormData {
   mode: "meme" | "dev";
@@ -165,9 +164,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      
-      {/* GA4 Test Component - Remove after testing */}
-      <GA4Test />
     </main>
   );
 }
